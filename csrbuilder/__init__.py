@@ -273,18 +273,18 @@ class CSRBuilder(object):
         self._set_subject_alt("rfc822_name", value)
 
     @property
-    def subject_alt_rids(self):
+    def subject_alt_directory_names(self):
         """
-        A list of unicode strings of all registered ids in the subject alt name
-        extension request. Empty list indicates no subject alt name extension
-        request.
+        A list of unicode strings of all directory names in the subject alt
+        name extension request. Empty list indicates no subject alt name
+        extension request.
         """
 
-        return self._get_subject_alt("registered_id")
+        return self._get_subject_alt("directory_name")
 
-    @subject_alt_rids.setter
-    def subject_alt_rids(self, value):
-        self._set_subject_alt("registered_id", value)
+    @subject_alt_directory_names.setter
+    def subject_alt_directory_names(self, value):
+        self._set_subject_alt("directory_name", value)
 
     def _get_subject_alt(self, name):
         """
